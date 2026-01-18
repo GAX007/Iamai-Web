@@ -45,35 +45,35 @@ const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
 
           {/* Información de Ubicación y Teléfono */}
           <div className="bg-zinc-900 p-8 rounded-3xl border border-zinc-800 shadow-xl">
-             <h2 className="text-2xl font-bold mb-6 text-accent">{lang === 'ES' ? 'Ubicación' : 'Kokapena'}</h2>
-             <div className="flex items-start space-x-4 mb-6">
-                <p className="text-lg">Kontzezino Kalea, 14, 20500 Arrasate / Mondragón, Gipuzkoa</p>
-             </div>
-             <div className="flex items-center space-x-4 mb-8">
-                <a href="tel:+34943000000" className="text-lg hover:text-accent transition-colors">+34 943 00 00 00</a>
-             </div>
-             
-             {/* Botón Instagram */}
-             <a 
-              href="https://www.instagram.com/iamaicafe" 
-              target="_blank" 
+            <h2 className="text-2xl font-bold mb-6 text-accent">{lang === 'ES' ? 'Ubicación' : 'Kokapena'}</h2>
+            <div className="flex items-start space-x-4 mb-6">
+              <p className="text-lg">Kontzezino Kalea, 14, 20500 Arrasate / Mondragón, Gipuzkoa</p>
+            </div>
+            <div className="flex items-center space-x-4 mb-8">
+              <a href="tel:+34943000000" className="text-lg hover:text-accent transition-colors">+34 943 00 00 00</a>
+            </div>
+
+            {/* Botón Instagram */}
+            <a
+              href="https://www.instagram.com/iamaicafe?igsh=MXQwbmxsajNraXd4NA=="
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-zinc-800 hover:bg-accent text-white py-3 px-6 rounded-xl transition-all font-bold w-full"
-             >
-                <span>{t.followUs}</span>
-             </a>
+            >
+              <span>{t.followUs}</span>
+            </a>
           </div>
         </div>
 
         {/* COLUMNA DERECHA: Mapa interactivo (Iframe de Google Maps) */}
         <div className="h-[500px] lg:h-full min-h-[400px] bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-xl">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9454948131947!2d-2.494017023920752!3d43.06361389036377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fd67a43172f57%3A0xd85b9d63232b7288!2sRestaurante%20Iamai!5e0!3m2!1ses!2ses!4v1768679041806!5m2!1ses!2ses"  
-            width="100%" 
-            height="100%" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy" 
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9454948131947!2d-2.494017023920752!3d43.06361389036377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fd67a43172f57%3A0xd85b9d63232b7288!2sRestaurante%20Iamai!5e0!3m2!1ses!2ses!4v1768679041806!5m2!1ses!2ses"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
             className="grayscale invert contrast-125" // Estilo oscuro para el mapa
           ></iframe>
         </div>

@@ -54,32 +54,21 @@ export const TRANSLATIONS: Record<'ES' | 'EUS', TranslationStrings> = {
 
 // --- FOTOS DE PINTXOS ---
 export const GALLERY_PINTXOS = [
-  'gilda.jpg',
-  'tortilla.jpg',
-  'bacalao.jpg',
-  'gallery-pintxo-1.jpg',
-  'gallery-pintxo-2.jpg',
-  'gallery-pintxo-3.jpg',
+  'CuartoDeHamburguesa.jpeg',
+  'MiniTaco.jpeg',
 ];
 
 // --- FOTOS DE COMIDA ---
 export const GALLERY_FOOD = [
-  'comida-1.jpg',
-  'comida-2.jpg',
-  'comida-3.jpg',
-  'comida-4.jpg',
-  'comida-5.jpg',
-  'comida-6.jpg',
+  'B1-Bocadillo.jpeg',
+  'H1-Hamburguesa.jpeg',
 ];
 
 // --- FOTOS DE CAFÉ ---
 export const GALLERY_COFFEE = [
-  'cafe-flat-white.jpg',
-  'cafe-v60.jpg',
-  'cafe-espresso.jpg',
-  'cafe-latte-art.jpg',
-  'cafe-grano-especialidad.jpg',
-  'cafe-barista.jpg',
+  'CL1.jpeg',
+  'CLV1.jpeg',
+  'CL2.jpeg',
 ];
 
 /**
@@ -89,7 +78,7 @@ export const GALLERY_COFFEE = [
  */
 export const SUB_CATEGORY_TITLES: Record<string, { ES: string, EUS: string }> = {
   raciones: { ES: 'RACIONES', EUS: 'RAZIOAK' },
-  bocadillos: { ES: 'BOCADILLOS', EUS: 'OGITARTEKOAK' },
+  enPan: { ES: 'EN PAN', EUS: 'OGIAREKIN' },
   combinados: { ES: 'PLATOS COMBINADOS', EUS: 'PLATER KONBINATUAK' },
   postres: { ES: 'POSTRES', EUS: 'POSTREAK' },
   primero: { ES: 'PRIMEROS PLATOS', EUS: 'LEHENENGO PLATERAK' },
@@ -103,31 +92,66 @@ export const SUB_CATEGORY_TITLES: Record<string, { ES: string, EUS: string }> = 
  */
 export const MENU_ITEMS: MenuItem[] = [
   {
+
+    //======PINTXOS======
     id: 1,
     category: 'pintxo',
-    name: { ES: 'Gilda Moderna', EUS: 'Gilda Modernoa' },
-    price: '3.50€',
+    name: { ES: 'Cuarto de Hamburguesa', EUS: 'Hamburgesa laurdena' },
+    price: '1.20€',
     description: {
-      ES: 'Anchoa del cantábrico, piparra y cítricos.',
-      EUS: 'Kantauri itsasoko antxoa, piparra eta zitrikoak.'
+      ES: 'Cuarto de hamburguesa de pulled pork, con huevo y queso.',
+      EUS: 'Hamburgesa laurdena pulled pork-ena, harrautza eta gaztarekin.'
     },
-    image: './img/gilda.jpg'
+    image: './img/CuartoDeHamburguesa.jpeg'
+  },
+  {
+    id: 2,
+    category: 'pintxo',
+    name: { ES: 'Mini Taco', EUS: 'Mini Tako' },
+    price: '2.80€',
+    description: { ES: 'Mini taco de pollo con queso y lechuga.', EUS: 'Mini tako oilaskoa, letxuga eta gazta.' },
+    image: './img/MiniTaco.jpeg'
+  },
+
+//======PLATOS DE LA CARTA======
+
+  {
+    id: 3,
+    category: 'carta',
+    subcategory: 'enPan',
+    name: { ES: 'B1-Bocadillo', EUS: 'B1-Ogitartekoa' },
+    price: '9.00€',
+    description: { ES: 'Bocadillo casero.', EUS: 'Ogitarteko kaseroak.' },
+    image: './img/B1-Bocadillo.jpeg'
   },
   {
     id: 4,
-    category: 'coffee',
-    name: { ES: 'Flat White', EUS: 'Flat White' },
-    price: '3.20€',
-    description: { ES: 'Café de especialidad.', EUS: 'Espezialitateko kafea.' },
-    image: './img/cafe-flat-white.jpg'
-  },
-  {
-    id: 7,
     category: 'carta',
-    subcategory: 'raciones',
-    name: { ES: 'Rabas Crujientes', EUS: 'Raba Kurruskariak' },
-    price: '9.50€',
-    description: { ES: 'Calamares frescos con alioli de lima.', EUS: 'Txipiroi freskoak limazko alioliarekin.' },
-    image: './img/rabas.jpg'
-  }
+    subcategory: 'enPan',
+    name: { ES: 'H1-Hamburguesa', EUS: 'H1-Hamburgesa' },
+    price: '13.00€',
+    description: { ES: 'Hamburguesa casera con patatas, pan de brioche y queso.', EUS: 'Hamburgesa kaseroak patatekin, brioche ogia eta gazta.' },
+    image: './img/H1-Hamburguesa.jpeg'
+  },
+
+
+//======CAFÉ======
+{
+    id: 4,
+    category: 'coffee',
+    name: { ES: 'Café con leche', EUS: 'Kafesnea' },
+    price: '1.90€',
+    description: { ES: 'Cafe con leche tradicional sin crema.', EUS: 'Krema gabeko kafesne tradizionala.' },
+    image: './img/CL1.jpeg'
+  },
+
+
+  {
+    id: 5,
+    category: 'coffee',
+    name: { ES: 'Café con leche en vaso', EUS: 'Kafesnea basuan' },
+    price: '2.15€',
+    description: { ES: 'Cafe con leche tradicional sin crema en vaso.', EUS: 'Krema gabeko kafesne tradizionala basuan.' },
+    image: './img/CLV1.jpeg'
+  },
 ];
