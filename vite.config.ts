@@ -4,8 +4,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: './', // Asegura que las rutas de los archivos generados sean relativas
+  build: {
+    outDir: 'dist',
+    sourcemap: false
+  },
   server: {
-    port: 3000,
-    open: true
+    port: 3000
   }
 });
