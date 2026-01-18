@@ -50,7 +50,7 @@ const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
               <p className="text-lg">Kontzezino Kalea, 14, 20500 Arrasate / Mondragón, Gipuzkoa</p>
             </div>
             <div className="flex items-center space-x-4 mb-8">
-              <a href="tel:+34943000000" className="text-lg hover:text-accent transition-colors">+34 943 00 00 00</a>
+              <a href="tel:+34943000000" className="text-lg hover:text-accent transition-colors">+34 943 71 29 95</a>
             </div>
 
             {/* Botón Instagram */}
