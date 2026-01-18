@@ -104,37 +104,70 @@ const Menu: React.FC<{ lang: Language }> = ({ lang }) => {
         );
       })}
 
-      {/* MODAL DETALLE (Popup que aparece al pulsar un plato) */}
+      {/* MODAL DETALLE (Popup arreglado para móvil) */}
       {selectedItem && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onClick={() => setSelectedItem(null)}>
-          <div className="bg-zinc-950 rounded-3xl overflow-hidden max-w-3xl w-full border border-zinc-800 relative animate-scale-up shadow-2xl shadow-accent/10" onClick={e => e.stopPropagation()}>
-            <button 
-              onClick={() => setSelectedItem(null)}
-              className="absolute top-6 right-6 z-10 bg-black/50 p-3 rounded-full text-white hover:text-accent border border-white/10 transition-all"
+        // 1. CAMBIO: Añadimos 'overflow-y-auto' para permitir scroll si el plato es muy alto
+        // y quitamos 'flex items-center' de aquí para evitar el recorte superior.
+        <div 
+          className="fixed inset-0 z-[100] overflow-y-auto bg-black/90 backdrop-blur-md" 
+          onClick={() => setSelectedItem(null)}
+        >
+          {/* 2. CAMBIO: Creamos este contenedor intermedio. 
+              'min-h-full' asegura que ocupe al menos toda la pantalla.
+              'items-center' centra el contenido si sobra espacio, pero no recorta si falta. 
+              'p-4' da un margen para que no se pegue a los bordes en móvil. */}
+          <div className="flex min-h-full items-center justify-center p-4">
+            
+            <div 
+              className="bg-zinc-950 rounded-3xl overflow-hidden max-w-3xl w-full border border-zinc-800 relative animate-scale-up shadow-2xl shadow-accent/10" 
+              onClick={e => e.stopPropagation()}
             >
-              Cerrar
-            </button>
-            <div className="grid md:grid-cols-2">
-              <div className="aspect-[4/5] md:aspect-auto bg-zinc-900">
-                <img 
-                  src={selectedItem.image} 
-                  alt={selectedItem.name[lang]} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-10 flex flex-col justify-center">
-                <span className="text-accent text-xs font-black uppercase tracking-[0.3em] mb-4">
-                  {selectedItem.subcategory ? (SUB_CATEGORY_TITLES[selectedItem.subcategory]?.[lang] || selectedItem.subcategory) : (categoryTitles[selectedItem.category] || selectedItem.category)}
-                </span>
-                <h2 className="text-4xl font-bold mb-6 leading-tight">
-                  {selectedItem.name[lang]}
-                </h2>
-                <div className="w-12 h-1 bg-accent mb-6"></div>
-                <p className="text-zinc-400 text-lg leading-relaxed mb-10">
-                  {selectedItem.description[lang]}
-                </p>
-                <div className="mt-auto flex items-baseline">
-                  <span className="text-5xl font-black text-white">{selectedItem.price}</span>
+              {/* 3. CAMBIO: Botón de Cerrar (X) mejorado.
+                  - Cambiado a un icono SVG (la X) en lugar de texto.
+                  - Fondo semitransparente para que se vea bien sobre fotos claras u oscuras.
+                  - Posición ajustada. */}
+              <button 
+                onClick={() => setSelectedItem(null)}
+                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/60 text-white hover:text-accent border border-white/10 transition-all backdrop-blur-sm"
+                aria-label="Cerrar"
+              >
+                {/* Icono de X */}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div className="grid md:grid-cols-2">
+                {/* Imagen */}
+                <div className="aspect-[4/5] md:aspect-auto bg-zinc-900">
+                  <img 
+                    src={selectedItem.image} 
+                    alt={selectedItem.name[lang]} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Información */}
+                <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <span className="text-accent text-xs font-black uppercase tracking-[0.3em] mb-4">
+                    {selectedItem.subcategory 
+                      ? (SUB_CATEGORY_TITLES[selectedItem.subcategory]?.[lang] || selectedItem.subcategory) 
+                      : (categoryTitles[selectedItem.category] || selectedItem.category)}
+                  </span>
+                  
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                    {selectedItem.name[lang]}
+                  </h2>
+                  
+                  <div className="w-12 h-1 bg-accent mb-6"></div>
+                  
+                  <p className="text-zinc-400 text-lg leading-relaxed mb-10">
+                    {selectedItem.description[lang]}
+                  </p>
+                  
+                  <div className="mt-auto flex items-baseline">
+                    <span className="text-4xl md:text-5xl font-black text-white">{selectedItem.price}</span>
+                  </div>
                 </div>
               </div>
             </div>
