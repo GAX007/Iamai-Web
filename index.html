@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iamai Cafe | Modern Pintxos & Specialty Coffee</title>
-    <!-- Tailwind via CDN para prototipado rápido -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,19 +19,16 @@
         .bg-accent { background-color: #ff6b00; }
         .border-accent { border-color: #ff6b00; }
         
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1a1a1a; }
         ::-webkit-scrollbar-thumb { background: #ff6b00; border-radius: 4px; }
 
-        /* Shimmer Animation */
         @keyframes shimmer {
           0% { transform: translateX(-100%); }
           100% { transform: translateX(100%); }
         }
         .animate-shimmer { animation: shimmer 2s infinite linear; }
 
-        /* Entry Animations */
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
@@ -66,7 +62,6 @@
 </head>
 <body>
     <div id="root"></div>
-    <!-- Punto de entrada para Vite. Durante el 'npm run build', Vite reemplazará esto por el JS compilado -->
     <script type="module" src="/index.tsx"></script>
 </body>
 </html>
