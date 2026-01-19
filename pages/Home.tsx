@@ -17,17 +17,17 @@ const Home: React.FC<{ lang: Language }> = ({ lang }) => {
       {/* SECCIÓN HERO (Presentación con imagen de fondo) */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             // Para usar foto local: src="./img/hero-bg.jpg"
-            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1920" 
-            alt="Bar Background" 
+            src="./img/fondo.png"
+            alt="Bar Background"
             className="w-full h-full object-cover opacity-50"
             loading="eager" // Se carga inmediatamente para evitar parpadeos
           />
           {/* Degradado para que el texto resalte sobre la foto */}
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
         </div>
-        
+
         <div className="relative z-10 text-center px-4 max-w-4xl animate-slide-up">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6">
             IAMAI <span className="text-accent">CAFE</span>
@@ -35,8 +35,8 @@ const Home: React.FC<{ lang: Language }> = ({ lang }) => {
           <p className="text-xl md:text-2xl text-zinc-300 mb-10 font-light">
             {t.heroSubtitle}
           </p>
-          <Link 
-            to="/menu" 
+          <Link
+            to="/menu"
             className="inline-block bg-accent hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-lg shadow-orange-900/20"
           >
             {t.viewMenu}
@@ -55,9 +55,9 @@ const Home: React.FC<{ lang: Language }> = ({ lang }) => {
           {favorites.slice(0, 6).map((item) => (
             <div key={item.id} className="group relative overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 transition-all hover:border-accent">
               <div className="aspect-[4/5] overflow-hidden bg-zinc-800">
-                <img 
-                  src={item.image} 
-                  alt={item.name[lang]} 
+                <img
+                  src={item.image}
+                  alt={item.name[lang]}
                   className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 opacity-0"
                   loading="lazy"
                   onLoad={(e) => (e.currentTarget.classList.remove('opacity-0'), e.currentTarget.classList.add('opacity-100'))}
@@ -75,10 +75,10 @@ const Home: React.FC<{ lang: Language }> = ({ lang }) => {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-16 text-center">
-          <Link 
-            to="/gallery" 
+          <Link
+            to="/gallery"
             className="text-accent border-b border-accent pb-1 font-medium hover:text-white hover:border-white transition-all"
           >
             {t.navGallery} →
