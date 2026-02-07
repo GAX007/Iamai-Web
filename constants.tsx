@@ -402,7 +402,7 @@ export const MENU_ITEMS: MenuItem[] = [
       ES: 'Nuestra especialidad casera cremosa.',
       EUS: 'Gure etxeko espezialitate krematsua.'
     },
-    image: './img/carta-tartaIamai.jpeg'
+    image: './img/carta-TQ.jpeg'
   },
   {
     id: 28,
