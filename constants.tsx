@@ -108,7 +108,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: 1,
     category: 'pintxo',
     name: { ES: 'Cuarto de Hamburguesa', EUS: 'Hanburgesa laurdena' },
-    price: '1.20€',
+    price: '1.90€',
     description: {
       ES: 'Cuarto de hamburguesa de pulled pork, con huevo y queso.',
       EUS: 'Hanburgesa laurdena pulled pork-ena, harrautza eta gaztarekin.'
@@ -151,7 +151,7 @@ export const MENU_ITEMS: MenuItem[] = [
     id: 6,
     category: 'pintxo',
     name: { ES: 'Media hamburguesa', EUS: 'Hanburgesa erdia' },
-    price: '3.40€',
+    price: '3.80€',
     description: {
       ES: 'Media hamburguesa con bacon, pechuga rebozada, queso y salsa de hamburguesa',
       EUS: 'Hanburgesa erdia bacon, papar errebozatua, gazta eta hanburgesa saltsarekin'
