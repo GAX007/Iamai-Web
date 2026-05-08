@@ -285,16 +285,16 @@ export const MENU_ITEMS: MenuItem[] = [
     image: './img/carta-E1.jpeg'
   },
   {
-    id: 18,
+    id: 36,
     category: 'carta',
     subcategory: 'ensalada',
-    name: { ES: 'E2. Langostinos Torpedo', EUS: 'E2. Torpedo Otarrainxkak' },
-    price: '12.00€',
+    name: { ES: 'E2. Mixta Iamai', EUS: 'E2. Iamai Mixtoa' },
+    price: '10.50€',
     description: {
-      ES: 'Lechuga, tomate, cebolla, langostinos torpedo y salsa de yogurt agridulce.',
-      EUS: 'Uraza, tomatea, tipula, torpedo otarrainxkak eta jogurt saltsa gazi-gozoa.'
+      ES: 'Lechuga, tomate, cebolla, huevo cocido, aceitunas y atún.',
+      EUS: 'Uraza, tomatea, tipula, arrautza egosia, olibak eta atuna.'
     },
-    image: './img/carta-E2.jpeg'
+    image: './img/carta-E2-mixta.jpeg'
   },
   {
     id: 19,
@@ -319,6 +319,18 @@ export const MENU_ITEMS: MenuItem[] = [
       EUS: 'Uraza, tipula karamelizatua, arrautza egosia, gazta, pastrami eta maionesa.'
     },
     image: './img/carta-S2.jpeg'
+  },
+  {
+    id: 37,
+    category: 'carta',
+    subcategory: 'enPan',
+    name: { ES: 'S3. Vegetal Pollo', EUS: 'S3. Oilasko Begetala' },
+    price: '9.50€',
+    description: {
+      ES: 'Lechuga, tomate, cebolla caramelizada, queso, jamón de pavo, pollo apanado y salsa de la casa.',
+      EUS: 'Uraza, tomatea, tipula karamelizatua, gazta, indioilar urdaiazpikoa, oilasko arrautzatua eta etxeko saltsa.'
+    },
+    image: './img/carta-S3.jpeg'
   },
   {
     id: 21,
@@ -357,14 +369,50 @@ export const MENU_ITEMS: MenuItem[] = [
     image: './img/carta-B1.jpeg'
   },
   {
+    id: 38,
+    category: 'carta',
+    subcategory: 'enPan',
+    name: { ES: 'B2. Lomo Apanado y Alioli', EUS: 'B2. Solomo Arrautzatua eta Aliolia' },
+    price: '8.50€',
+    description: {
+      ES: 'Lomo apanado con patatas fritas, queso, panceta y alioli casero.',
+      EUS: 'Solomo arrautzatua patata frijituekin, gazta, hirugiharra eta etxeko aliolia.'
+    },
+    image: './img/carta-B2.jpeg'
+  },
+  {
+    id: 39,
+    category: 'carta',
+    subcategory: 'enPan',
+    name: { ES: 'B3. Pastrami y Huevo Frito', EUS: 'B3. Pastramia eta Arrautza Frijitua' },
+    price: '9.00€',
+    description: {
+      ES: 'Pastrami, cebolla frita, queso, huevos fritos, patatas y salsa de la casa.',
+      EUS: 'Pastramia, tipula frijitua, gazta, arrautza frijituak, patatak eta etxeko saltsa.'
+    },
+    image: './img/carta-B3.jpeg'
+  },
+  {
+    id: 40,
+    category: 'carta',
+    subcategory: 'enPan',
+    name: { ES: 'B4. Jamón Ibérico', EUS: 'B4. Urdaiazpiko Iberikoa' },
+    price: '8.00€',
+    description: {
+      ES: 'Jamón ibérico con aceite de oliva virgen extra y tomate.',
+      EUS: 'Urdaiazpiko iberikoa oliba-olio birjina estra eta tomatearekin.'
+    },
+    image: './img/carta-B4.jpeg'
+  },
+  {
     id: 24,
     category: 'carta',
     subcategory: 'combinados',
-    name: { ES: 'P1. Pollo Frito', EUS: 'P1. Oilasko Frijitua' },
+    name: { ES: 'P1. Jamón Ibérico o Tiras de Pollo Crujientes', EUS: 'P1. Urdaiazpiko iberikoa edo oilasko kurruskarien tirak' },
     price: '14.00€',
     description: {
-      ES: 'Con panceta, dos huevos fritos, croquetas y patatas.',
-      EUS: 'Hirugiharrarekin, bi arrautza frijitu, kroketak eta patatekin.'
+      ES: 'Con dos huevos fritos, croquetas y patatas.',
+      EUS: 'Bi arrautza frijitu, kroketak eta patatekin.'
     },
     image: './img/carta-P1.jpeg'
   },
@@ -381,16 +429,40 @@ export const MENU_ITEMS: MenuItem[] = [
     image: './img/carta-P2.jpeg'
   },
   {
-    id: 26,
+    id: 41,
     category: 'carta',
     subcategory: 'combinados',
-    name: { ES: 'P3. Jamón Ibérico', EUS: 'P3. Urdaiazpiko Iberikoa' },
-    price: '14.00€',
+    name: { ES: 'P3. Cachopo', EUS: 'P3. Katxopoa' },
+    price: '19.50€',
     description: {
-      ES: 'Con dos huevos fritos y patatas.',
-      EUS: 'Bi arrautza frijitu eta patatekin.'
+      ES: 'Filete apanado relleno de jamón y queso y patatas fritas.',
+      EUS: 'Xerra arrautzatua urdaiazpiko eta gaztaz betea eta patata frijituak.'
     },
-    image: './img/carta-P3.jpeg'
+    image: './img/carta-P3-cachopo.jpeg'
+  },
+  {
+    id: 42,
+    category: 'carta',
+    subcategory: 'combinados',
+    name: { ES: 'P4. Espaguetis Carbonara o Boloñesa', EUS: 'P4. Espagetiak Carbonara edo Bolognese' },
+    price: '12.50€',
+    description: {
+      ES: 'Con queso parmesano. A elegir entre salsa carbonara o boloñesa.',
+      EUS: 'Parmesano gaztarekin. Carbonara edo bolognese saltsa aukeran.'
+    },
+    image: './img/carta-P4.jpeg'
+  },
+  {
+    id: 43,
+    category: 'carta',
+    subcategory: 'combinados',
+    name: { ES: 'P5. Arroz Tres Delicias Frito', EUS: 'P5. Hiru Delizia Arroz Frijitua' },
+    price: '12.50€',
+    description: {
+      ES: 'Frito con soja, huevo y pollo frito.',
+      EUS: 'Soja, arrautza eta oilasko frijituarekin frijitua.'
+    },
+    image: './img/carta-P5.jpeg'
   },
   {
     id: 27,
@@ -475,4 +547,16 @@ export const MENU_ITEMS: MenuItem[] = [
     description: { ES: 'Vaso para llevar.', EUS: 'Eramateko edalontzia.' },
     image: './img/CLV1.jpeg'
   },
+  {
+    id: 44,
+    category: 'carta',
+    subcategory: 'postres',
+    name: { ES: 'Pudín de Café Casero con Nata', EUS: 'Etxeko Kafe Budina Esne-gainarekin' },
+    price: '5.50€',
+    description: {
+      ES: 'Delicioso pudín artesanal de café servido con nata.',
+      EUS: 'Etxeko kafe budin goxoa esne-gainarekin zerbitzatua.'
+    },
+    image: './img/carta-pudin.jpeg'
+  }
 ];
