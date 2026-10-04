@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#241202" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="100" height="100" rx="22" fill="#0a0a0a"/>
+  <rect width="100" height="100" rx="22" fill="url(#bgGlow)"/>
+
+  <!-- Icon Artwork with Glow -->
+  <g filter="url(#neonGlow)" stroke="#ff6b00" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Steam / Stylized 'i' -->
+    <!-- Dot of the 'i' -->
+    <circle cx="51" cy="22" r="3.2" fill="#ff6b00" stroke="none" />
+    
+    <!-- Steam stem / body of 'i' -->
+    <path d="M 50 28 C 42 33 37 40 44 46 C 48 50 48 54 46 57" 
+          fill="none" stroke-width="3.5"/>
+    <path d="M 50 32 C 57 37 59 42 54 46" 
+          fill="none" stroke-width="2.5" stroke-opacity="0.75"/>
+
+    <!-- Coffee Cup Rim -->
+    <path d="M 28 54 C 28 54 36 57 50 57 C 64 57 72 54 72 54" 
+          fill="none" stroke-width="3.5"/>
+
+    <!-- Coffee Cup Body -->
+    <path d="M 28 54 C 28 72 38 82 50 82 C 62 82 72 72 72 54" 
+          fill="none" stroke-width="3.5"/>
+
+    <!-- Cup Handle -->
+    <path d="M 70 58 C 78 59 81 66 76 73 C 73 77 68 76 66 75" 
+          fill="none" stroke-width="3.2"/>
+
+    <!-- Saucer / Base -->
+    <path d="M 33 87 L 67 87" 
+          fill="none" stroke-width="3.5"/>
+  </g>
+</svg>
