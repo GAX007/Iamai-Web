@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Iamai Cafe
 
-# Run and deploy your AI Studio app
+Web informativa de Iamai Cafe, construida con React y Vite.
 
-This contains everything you need to run your app locally.
+## Desarrollo
 
-View your app in AI Studio: https://ai.studio/apps/drive/1rOmhAQj6i23IuA8579vsLRTy5ZICiDnZ
+1. Instalar Node.js (versión LTS compatible con las dependencias).
+2. Ejecutar `npm ci`.
+3. Ejecutar `npm run dev`.
 
-## Run Locally
+No se necesitan claves de API. No incluir secretos ni registros de visitantes
+en el código del navegador ni en la carpeta `public`.
 
-**Prerequisites:**  Node.js
+## Verificación
 
+- `npm run typecheck`
+- `npm run test:privacy` (requiere Microsoft Edge instalado)
+- `npm audit`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Las pruebas comprueban navegación en móvil y escritorio, ausencia de peticiones
+a terceros y almacenamiento de identificadores, bloqueo de recursos externos,
+cabeceras de seguridad y ausencia de archivos privados habituales en `dist`.
+
+## Publicación
+
+`npm run build` genera `dist`. Netlify usa `netlify.toml` para compilar, publicar
+solo esa carpeta y aplicar las cabeceras. Nunca publicar la raíz del repositorio.
+
+Las fuentes y estilos se generan localmente. Maps y redes sociales son enlaces
+externos voluntarios. No añadir analítica ni contenido externo sin revisar su
+impacto en privacidad, las cabeceras y la información/consentimiento aplicables.
+
+Consultar [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md) para los hallazgos y los datos legales
+y ajustes del alojamiento que todavía requieren comprobación.

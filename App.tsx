@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
 
 /**
  * COMPONENTE PRINCIPAL (App)
@@ -35,6 +36,7 @@ const App: React.FC = () => {
             <Route path="/menu" element={<Menu lang={lang} />} />
             <Route path="/gallery" element={<Gallery lang={lang} />} />
             <Route path="/contact" element={<Contact lang={lang} />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
 

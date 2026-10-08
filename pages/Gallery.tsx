@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Language } from '../types';
 import { TRANSLATIONS, GALLERY_PINTXOS, GALLERY_COFFEE, GALLERY_FOOD } from '../constants';
 
@@ -21,7 +21,7 @@ function LazyImage(props: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
 
-  const src = fileName.startsWith('http') ? fileName : `./img/${fileName}`;
+  const src = `./img/${encodeURIComponent(fileName)}`;
 
   useEffect(() => {
     const node = imgRef.current;

@@ -5,7 +5,7 @@ import { TRANSLATIONS } from '../constants';
 
 /**
  * PÁGINA: Contacto
- * Muestra horario, mapa interactivo de Google y botones de redes sociales.
+ * Muestra horario, enlace a Google Maps y botones de redes sociales.
  */
 const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
   const t = TRANSLATIONS[lang];
@@ -50,12 +50,12 @@ const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
               <p className="text-lg">Kontzezino Kalea, 14, 20500 Arrasate / Mondragón, Gipuzkoa</p>
             </div>
             <div className="flex items-center space-x-4 mb-8">
-              <a href="tel:+34943000000" className="text-lg hover:text-accent transition-colors">+34 943 71 29 95</a>
+              <a href="tel:+34943712995" className="text-lg hover:text-accent transition-colors">+34 943 71 29 95</a>
             </div>
 
             {/* Botón Instagram */}
             <a
-              href="https://www.instagram.com/iamaicafe?igsh=MXQwbmxsajNraXd4NA=="
+              href="https://www.instagram.com/iamaicafe/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-2 bg-zinc-800 hover:bg-accent text-white py-3 px-6 rounded-xl transition-all font-bold w-full"
@@ -65,17 +65,25 @@ const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
           </div>
         </div>
 
-        {/* COLUMNA DERECHA: Mapa interactivo (Iframe de Google Maps) */}
-        <div className="h-[500px] lg:h-full min-h-[400px] bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 shadow-xl">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.9454948131947!2d-2.494017023920752!3d43.06361389036377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fd67a43172f57%3A0xd85b9d63232b7288!2sRestaurante%20Iamai!5e0!3m2!1ses!2ses!4v1768679041806!5m2!1ses!2ses"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen={true}
-            loading="lazy"
-            className="grayscale invert contrast-125" // Estilo oscuro para el mapa
-          ></iframe>
+        {/* Google Maps solo recibe la visita cuando se abre el enlace. */}
+        <div className="min-h-[400px] bg-zinc-900 rounded-3xl border border-zinc-800 shadow-xl p-8 flex flex-col items-center justify-center text-center">
+          <h2 className="text-2xl font-bold mb-6 text-accent">
+            {lang === 'ES' ? 'Cómo llegar' : 'Nola iritsi'}
+          </h2>
+          <p className="text-lg mb-6">Kontzezino Kalea, 14, Arrasate / Mondragón</p>
+          <p className="text-zinc-400 mb-8 max-w-md">
+            {lang === 'ES'
+              ? 'El mapa se abre en Google Maps solo si pulsas el enlace. Al hacerlo, Google recibirá tu dirección IP y aplicará su política de privacidad.'
+              : 'Mapa Google Maps-en irekiko da esteka sakatzen baduzu soilik. Orduan, Googlek zure IP helbidea jasoko du eta bere pribatutasun-politika aplikatuko du.'}
+          </p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Restaurante+Iamai+Kontzezino+Kalea+14+Arrasate"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+          >
+            {lang === 'ES' ? 'Abrir Google Maps ↗' : 'Google Maps ireki ↗'}
+          </a>
         </div>
       </div>
     </div>
