@@ -51,6 +51,8 @@ const Contact: React.FC<{ lang: Language }> = ({ lang }) => {
             </div>
             <div className="flex items-center space-x-4 mb-8">
               <a href="tel:+34943712995" className="text-lg hover:text-accent transition-colors">+34 943 71 29 95</a>
+              <span className="text-lg text-zinc-500">/</span>
+              <a href="tel:+34747492218" className="text-lg hover:text-accent transition-colors">+34 747 49 22 18</a>
             </div>
 
             {/* Botón Instagram */}
